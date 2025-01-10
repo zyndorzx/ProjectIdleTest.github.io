@@ -8,20 +8,20 @@
     <style>
         .hero-image {
             position: relative;
-            width: 80%;
+            width: 100%;
             max-width: 1920px;
             height: auto;
             border-radius: 15px;
             margin: 2rem auto;
             display: block;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
-            box-shadow: 0 0 4px 2px black; /* Black outline */
+            box-shadow: 0 0 4px 2px black;
         }
 
         .hero-image:hover {
             transform: scale(1.05);
             box-shadow: 
-                0 0 4px 2px rgba(0, 0, 0, 0.9), /* Black hover outline */
+                0 0 4px 2px rgba(0, 0, 0, 0.9),
                 0 0 6px 4px rgba(0, 0, 0, 0.8), 
                 0 0 8px 6px rgba(0, 0, 0, 0.7);
         }
@@ -34,18 +34,20 @@
             text-align: center;
             color: white;
             transition: transform 0.3s ease;
+            width: 90%;
+            max-width: 1000px;
         }
 
         .hero-title {
             font-size: 5rem;
             font-weight: bold;
-            background: linear-gradient(to right, #b19cd9, #ff3478); /* Lighter purple to pink gradient */
+            background: linear-gradient(to right, #b19cd9, #ff3478);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             text-shadow: none;
             margin: 0;
             line-height: 1.1;
-            transition: font-size 0.3s ease; /* Ensure smooth size change */
+            transition: font-size 0.3s ease;
         }
 
         .hero-subtitle {
@@ -54,16 +56,15 @@
             margin-top: 1rem;
             color: white;
             line-height: 1.2;
-            transition: font-size 0.3s ease; /* Ensure smooth size change */
+            transition: font-size 0.3s ease;
         }
 
-        /* Hover effect to expand text */
         .hero-image:hover + .hero-text .hero-title {
-            font-size: 6rem; /* Increase size when hovering over image */
+            font-size: 6rem;
         }
 
         .hero-image:hover + .hero-text .hero-subtitle {
-            font-size: 2.5rem; /* Increase subtitle size when hovering over image */
+            font-size: 2.5rem;
         }
 
         .hero-description {
@@ -82,7 +83,6 @@
             line-height: 1.4;
         }
 
-        /* Button styles */
         .button-container {
             margin-top: 2rem;
         }
@@ -98,7 +98,7 @@
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             margin: 0 1rem;
             display: inline-block;
-            text-decoration: none; /* Removes underline */
+            text-decoration: none;
         }
 
         .button-white {
@@ -110,15 +110,55 @@
         .button-gradient {
             background: linear-gradient(to right, #b19cd9, #ff3478);
             color: white;
-            border: 0px solid transparent; /* Make sure there's no visible border */
-            background-clip: padding-box; /* Ensures gradient looks uniform */
+            border: 0px solid transparent;
+            background-clip: padding-box;
         }
 
         .button:hover {
             transform: scale(1.05);
-            box-shadow: 0 0 4px 2px rgba(255, 252, 252, 0.9), /* Black hover outline */
+            box-shadow: 0 0 4px 2px rgba(255, 252, 252, 0.9),
                         0 0 6px 4px rgba(255, 255, 255, 0.8),
                         0 0 8px 6px rgba(255, 255, 255, 0.7);
+        }
+
+        /* Media Queries */
+        @media (max-width: 768px) {
+            .hero-image {
+                width: 90%;
+            }
+
+            .hero-title {
+                font-size: 3.5rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.5rem;
+            }
+
+            .button-container {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .button {
+                width: 80%;
+                margin-bottom: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.2rem;
+            }
+
+            .button {
+                width: 100%;
+            }
         }
     </style>
 </head>
@@ -143,7 +183,6 @@
                 <div class="hero-text">
                     <h1 class="hero-title">Breathtakingly <br /> Insane</h1>
                     <p class="hero-subtitle">Ready to level up your experience today?</p>
-                    <!-- Add buttons here -->
                     <div class="button-container">
                         <a href="Blogs.html" class="button button-white">Blog</a>
                         <a href="events.html" class="button button-gradient">Events</a>
