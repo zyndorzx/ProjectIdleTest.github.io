@@ -1,0 +1,131 @@
+/* General Reset */
+body, ul {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: white;
+    color: #333;
+}
+
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    padding: 15px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.navbar ul li {
+    position: relative;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: orange;
+    font-size: 18px;
+    padding: 5px 10px;
+    transition: color 0.3s ease, transform 0.3s ease;
+    position: relative;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: orange;
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #ff8c00;
+    transform: scale(1.1);
+}
+
+.nav-link:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+.nav-link.active::after {
+    width: 100%;
+    left: 0;
+}
+
+/* Main Content */
+main {
+    padding: 20px;
+}
+
+section {
+    margin: 40px 0;
+    text-align: center;
+}
+
+h1 {
+    color: orange;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #f8f8f8;
+    color: #555;
+    font-size: 14px;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+.navbar {
+    display: flex;
+    justify-content: center;  /* Center all navbar items horizontally */
+    align-items: center;  /* Vertically center the navbar items */
+    position: relative;
+}
+
+.navbar-image {
+    position: absolute;
+    left: 20px;  /* Position the image next to the Home button */
+    width: 50px;  /* Set the width of the logo */
+    height: 50px; /* Set the height of the logo */
+    border-radius: 10px;  /* Add rounded corners to the image */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;  /* Animate the image scaling and the outline */
+    box-shadow: 0 0 0 2px transparent;  /* Initial transparent outline */
+}
+
+.navbar-image:hover {
+    transform: scale(0.8);  /* Make the image bigger on hover */
+    box-shadow: 
+        0 0 4px 2px rgba(255, 165, 0, 0.8),  /* Lighter shade of orange */
+        0 0 6px 4px rgba(255, 140, 0, 0.8),  /* Medium shade of orange */
+        0 0 8px 6px rgba(255, 69, 0, 0.8);   /* Darker shade of orange */
+}

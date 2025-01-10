@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Project Idle</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .hero-image {
+            position: relative;
+            width: 80%;
+            max-width: 1920px;
+            height: auto;
+            border-radius: 15px;
+            margin: 2rem auto;
+            display: block;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 0 4px 2px black; /* Black outline */
+        }
+
+        .hero-image:hover {
+            transform: scale(1.05);
+            box-shadow: 
+                0 0 4px 2px rgba(0, 0, 0, 0.9), /* Black hover outline */
+                0 0 6px 4px rgba(0, 0, 0, 0.8), 
+                0 0 8px 6px rgba(0, 0, 0, 0.7);
+        }
+
+        .hero-text {
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: white;
+            transition: transform 0.3s ease;
+        }
+
+        .hero-title {
+            font-size: 5rem;
+            font-weight: bold;
+            background: linear-gradient(to right, #b19cd9, #ff3478); /* Lighter purple to pink gradient */
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: none;
+            margin: 0;
+            line-height: 1.1;
+            transition: font-size 0.3s ease; /* Ensure smooth size change */
+        }
+
+        .hero-subtitle {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-top: 1rem;
+            color: white;
+            line-height: 1.2;
+            transition: font-size 0.3s ease; /* Ensure smooth size change */
+        }
+
+        /* Hover effect to expand text */
+        .hero-image:hover + .hero-text .hero-title {
+            font-size: 6rem; /* Increase size when hovering over image */
+        }
+
+        .hero-image:hover + .hero-text .hero-subtitle {
+            font-size: 2.5rem; /* Increase subtitle size when hovering over image */
+        }
+
+        .hero-description {
+            margin-top: 1rem;
+            font-size: 1.5rem;
+            color: white;
+            font-weight: bold;
+            line-height: 1.3;
+        }
+
+        .hero-extra-description {
+            margin-top: 1rem;
+            font-size: 0.75rem;
+            color: rgb(230, 230, 230);
+            font-weight: bold;
+            line-height: 1.4;
+        }
+
+        /* Button styles */
+        .button-container {
+            margin-top: 2rem;
+        }
+
+        .button {
+            padding: 1rem 2rem;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            margin: 0 1rem;
+            display: inline-block;
+            text-decoration: none; /* Removes underline */
+        }
+
+        .button-white {
+            background-color: white;
+            color: black;
+            border: 2px solid white;
+        }
+
+        .button-gradient {
+            background: linear-gradient(to right, #b19cd9, #ff3478);
+            color: white;
+            border: 0px solid transparent; /* Make sure there's no visible border */
+            background-clip: padding-box; /* Ensures gradient looks uniform */
+        }
+
+        .button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 4px 2px rgba(255, 252, 252, 0.9), /* Black hover outline */
+                        0 0 6px 4px rgba(255, 255, 255, 0.8),
+                        0 0 8px 6px rgba(255, 255, 255, 0.7);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="home.html" class="nav-link active">Home</a></li>
+                <li><a href="store.html" class="nav-link">Store</a></li>
+                <li><a href="about-us.html" class="nav-link">About Us</a></li>
+                <li><a href="events.html" class="nav-link">Events</a></li>
+                <li><a href="Blogs.html" class="nav-link">Blogs</a></li>
+                <li><a href="login.html" class="nav-link">Login</a></li>
+            </ul>
+            <img src="logo.jpg" alt="Logo" class="navbar-image">
+        </nav>
+    </header>
+    <main>
+        <section>
+            <div style="position: relative; text-align: center;">
+                <img src="image1.png" alt="Breathtaking Scene" class="hero-image">
+                <div class="hero-text">
+                    <h1 class="hero-title">Breathtakingly <br /> Insane</h1>
+                    <p class="hero-subtitle">Ready to level up your experience?</p>
+                    <!-- Add buttons here -->
+                    <div class="button-container">
+                        <a href="Blogs.html" class="button button-white">Blog</a>
+                        <a href="events.html" class="button button-gradient">Events</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>© 2025 Project Idle. All rights reserved.</p>
+    </footer>
+</body>
+</html>
