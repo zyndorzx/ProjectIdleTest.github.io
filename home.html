@@ -6,10 +6,16 @@
     <title>Home - Project Idle</title>
     <link rel="stylesheet" href="style.css">
     <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
         .hero-image {
             position: relative;
-            width: 80%;
-            max-width: 1920px;
+            width: 100%;
+            max-width: 100%; /* Ensure image doesn't exceed container width */
             height: auto;
             border-radius: 15px;
             margin: 2rem auto;
@@ -37,7 +43,7 @@
         }
 
         .hero-title {
-            font-size: 5rem;
+            font-size: 6vw; /* Use viewport width for responsive scaling */
             font-weight: bold;
             background: linear-gradient(to right, #b19cd9, #ff3478); /* Lighter purple to pink gradient */
             -webkit-background-clip: text;
@@ -49,7 +55,7 @@
         }
 
         .hero-subtitle {
-            font-size: 2rem;
+            font-size: 3vw; /* Responsive font size */
             font-weight: bold;
             margin-top: 1rem;
             color: white;
@@ -59,11 +65,11 @@
 
         /* Hover effect to expand text */
         .hero-image:hover + .hero-text .hero-title {
-            font-size: 6rem; /* Increase size when hovering over image */
+            font-size: 7vw; /* Increase size when hovering over image */
         }
 
         .hero-image:hover + .hero-text .hero-subtitle {
-            font-size: 2.5rem; /* Increase subtitle size when hovering over image */
+            font-size: 4vw; /* Increase subtitle size when hovering over image */
         }
 
         .hero-description {
@@ -120,6 +126,41 @@
                         0 0 6px 4px rgba(255, 255, 255, 0.8),
                         0 0 8px 6px rgba(255, 255, 255, 0.7);
         }
+
+        /* Media Queries for smaller screens */
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 8vw; /* Scale down the title on smaller screens */
+            }
+
+            .hero-subtitle {
+                font-size: 5vw; /* Scale subtitle down */
+            }
+
+            .button {
+                font-size: 1rem; /* Adjust button size for smaller screens */
+                padding: 0.8rem 1.6rem;
+            }
+
+            .navbar img {
+                width: 50px; /* Scale logo down on smaller screens */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-title {
+                font-size: 10vw; /* Further scale down for very small screens */
+            }
+
+            .hero-subtitle {
+                font-size: 6vw; /* Further scale down subtitle */
+            }
+
+            .button {
+                font-size: 0.9rem; /* Adjust button font size */
+                padding: 0.6rem 1.2rem;
+            }
+        }
     </style>
 </head>
 <body>
@@ -143,7 +184,6 @@
                 <div class="hero-text">
                     <h1 class="hero-title">Breathtakingly <br /> Insane</h1>
                     <p class="hero-subtitle">Ready to level up your experience today?</p>
-                    <!-- Add buttons here -->
                     <div class="button-container">
                         <a href="Blogs.html" class="button button-white">Blog</a>
                         <a href="events.html" class="button button-gradient">Events</a>

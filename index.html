@@ -5,6 +5,85 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project Idle</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Navbar Styles */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            background-color: #333;
+            color: white;
+        }
+
+        .navbar ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 1rem;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 0.5rem;
+            transition: color 0.3s ease;
+        }
+
+        .navbar a:hover {
+            color: #ff3478;
+        }
+
+        .navbar-image {
+            max-width: 120px;
+            height: auto;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background-color: #333;
+            color: white;
+        }
+
+        /* Media Queries for smaller screens */
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 1rem;
+            }
+
+            .navbar ul {
+                flex-direction: column;
+                gap: 0.5rem;
+                margin-top: 1rem;
+                align-items: flex-start;
+            }
+
+            .navbar-image {
+                width: 80px; /* Scale logo for smaller screens */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .navbar a {
+                font-size: 1rem; /* Adjust font size for very small screens */
+            }
+
+            .navbar-image {
+                width: 60px; /* Further scale logo down */
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
