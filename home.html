@@ -121,6 +121,18 @@
                         0 0 8px 6px rgba(255, 255, 255, 0.7);
         }
 
+        /* Add hover effect to profile pictures */
+        .team-member img, .team-testers img {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .team-member img:hover, .team-testers img:hover {
+            transform: scale(1.2); /* Increase size on hover */
+            box-shadow: 
+                0 0 4px 2px rgba(0, 0, 0, 0.2),
+                0 0 8px 4px rgba(0, 0, 0, 0.1);
+        }
+
         /* Media Queries */
         @media (max-width: 768px) {
             .hero-image {
@@ -236,8 +248,7 @@
                     <h3 style="font-size: 1.2rem; margin-top: 1rem;">Community Manager</h3>
                     <p style="font-size: 0.8rem; color: gray;">(Change Name Later)</p>
                 </div>
-        
-<!-- Testers Section -->
+                <!-- Testers Section -->
 <div class="team-testers" style="text-align: center;">
     <h3 style="font-size: 1.5rem; margin-bottom: 2rem;">Testers</h3>
     <div style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 1.5rem; justify-items: center;">
@@ -325,11 +336,10 @@
     </div>
 </div>
 
+        
             </div>
         </section>
-        
     </main>
-    
     <footer>
         <p>© 2025 Project Idle. All rights reserved.</p>
     </footer>
