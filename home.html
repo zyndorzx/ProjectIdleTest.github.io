@@ -365,6 +365,103 @@
     font-size: 1rem;
     margin-bottom: 0.5rem;
 }
+.player-count {
+  background-color: #f9f9f9;
+  text-align: center;
+  padding: 2rem 1rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin: 2rem auto;
+  max-width: 800px;
+}
+
+.player-count-content h2 {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+.stats-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.stat-box {
+  background-color: white;
+  border-radius: 10px;
+  padding: 1rem 2rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.stat-box:hover {
+  transform: scale(1.05);
+}
+
+.stat-box h3 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #007bff;
+  margin-bottom: 0.5rem;
+}
+
+.stat-box p {
+  font-size: 1rem;
+  color: #555;
+}
+.top-players {
+  background-color: #f9f9f9;
+  text-align: center;
+  padding: 2rem 1rem;
+  border-radius: 10px;
+  margin: 2rem auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+}
+
+.players-content h2 {
+  font-size: 2rem;
+  color: #333;
+}
+
+.players-content p {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 1.5rem;
+}
+
+.players-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.player-card {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.player-card:hover {
+  transform: scale(1.05); /* Slightly enlarges the card */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Enhances the shadow */
+  background-color: #f0f8ff; /* Optional: Adds a subtle color change */
+  cursor: pointer;
+}
+
+.player-card h3 {
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.player-card p {
+  font-size: 1rem;
+  color: #777;
+}
 
     </style>
 </head>
@@ -409,7 +506,42 @@
                 </div>
             </div>
         </section>
-        
+        <section class="player-count">
+            <div class="player-count-content">
+              <h2>Community Stats</h2>
+              <div class="stats-container">
+                <div class="stat-box">
+                  <h3 id="total-visitors">0</h3>
+                  <p>Total Visitors</p>
+                </div>
+                <div class="stat-box">
+                  <h3 id="active-players">0</h3>
+                  <p>Active Players</p>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="top-players">
+            <div class="players-content">
+              <h2>Top Players</h2>
+              <p>Here are the players dominating the leaderboard!</p>
+              <div class="players-container">
+                <div class="player-card">
+                  <h3>#1 - PlayerLegend</h3>
+                  <p>Score: 12,345</p>
+                </div>
+                <div class="player-card">
+                  <h3>#2 - Speedster123</h3>
+                  <p>Score: 10,876</p>
+                </div>
+                <div class="player-card">
+                  <h3>#3 - GamerQueen</h3>
+                  <p>Score: 9,876</p>
+                </div>
+              </div>
+            </div>
+          </section>
+          
     </main>
     <footer class="footer">
         <div class="footer-content">
