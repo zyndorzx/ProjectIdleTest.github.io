@@ -3,177 +3,257 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blogs - Project Idle</title>
+    <title>Blog Post - Project Idle</title>
     <link rel="stylesheet" href="style.css">
     <style>
-
-
-        .footer {
-            background-color: #f9f9f9;
-            padding: 2rem 1rem;
-            text-align: center;
-            box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.1);
-        }
-        
-        .footer-content {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            align-items: center;
-            gap: 2rem;
-        }
-        
-        .footer-join {
-            text-align: center;
-            max-width: 400px;
-        }
-        
-        .footer-join h2 {
-            font-size: 1.5rem;
-            font-weight: bold;
-            margin: 0.5rem 0;
-            color: #333;
-        }
-        
-        .footer-join p {
-            font-size: 1rem;
-            color: #555;
-        }
-        
-        .social-icons {
-            margin-top: 1rem;
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-        }
-        
-        .social-icons a {
-            text-decoration: none;
-            padding: 0.5rem 1rem;
-            border-radius: 5px;
-            font-weight: bold;
-            color: white;
-            transition: background-color 0.3s ease, transform 0.3s ease;
-        }
-        
-        .discord-icon {
-            background-color: #5865f2;
-        }
-        
-        .twitter-icon {
-            background-color: #1da1f2;
-        }
-        
-        .youtube-icon {
-            background-color: #ff0000;
-        }
-        
-        .social-icons a:hover {
-            transform: scale(1.05);
-            opacity: 0.9;
-        }
-        
-        .footer-links {
-            display: flex;
-            gap: 2rem;
-        }
-        
-        .footer-column h3 {
-            font-size: 1rem;
-            color: #333;
-            margin-bottom: 0.5rem;
-        }
-        
-        .footer-column ul {
-            list-style: none;
-            padding: 0;
+        body {
+            font-family: Arial, sans-serif;
             margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
         }
-        
-        .footer-column ul li {
-            margin: 0.3rem 0;
+
+        .blog-container {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 1.5rem;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
         }
-        
-        .footer-column ul li a {
-            text-decoration: none;
-            color: #007bff;
-            transition: color 0.3s ease;
-        }
-        
-        .footer-column ul li a:hover {
-            color: #0056b3;
-        }
-        
-        .footer-bottom {
-            margin-top: 2rem;
-            text-align: center;
-            font-size: 0.875rem;
-            color: #888;
-        }
-        
-        .footer-bottom .logo {
-            font-weight: bold;
-            font-size: 1rem;
+
+        .blog-title {
+            font-size: 2rem;
             margin-bottom: 0.5rem;
+            color: #ffa500;
+        }
+
+        .blog-meta {
+            font-size: 0.9rem;
+            color: #888;
+            margin-bottom: 1.5rem;
+        }
+
+        .blog-content {
+            line-height: 1.6;
+            font-size: 1rem;
+        }
+
+        .blog-content h2 {
+            font-size: 1.5rem;
+            margin-top: 1rem;
+            color: #333;
+        }
+
+        .blog-content p {
+            margin-bottom: 1rem;
+        }
+
+        .blog-footer {
+            margin-top: 2rem;
+            font-size: 0.9rem;
+            color: #888;
+            text-align: center;
+        }
+
+        .blog-footer a {
+            text-decoration: none;
+            color: #ffa500;
+        }
+
+        .blog-footer a:hover {
+            text-decoration: underline;
         }
         
-            </style>
+    .footer {
+    background-color: #f9f9f9;
+    padding: 2rem 1rem;
+    text-align: center;
+    box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.footer-join {
+    text-align: center;
+    max-width: 400px;
+}
+
+.footer-join h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0.5rem 0;
+    color: #333;
+}
+
+.footer-join p {
+    font-size: 1rem;
+    color: #555;
+}
+
+.social-icons {
+    margin-top: 1rem;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.social-icons a {
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    font-weight: bold;
+    color: white;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.discord-icon {
+    background-color: #5865f2;
+}
+
+.twitter-icon {
+    background-color: #1da1f2;
+}
+
+.youtube-icon {
+    background-color: #ff0000;
+}
+
+.social-icons a:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+.footer-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.footer-column h3 {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-column ul li {
+    margin: 0.3rem 0;
+}
+
+.footer-column ul li a {
+    text-decoration: none;
+    color: #007bff;
+    transition: color 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+    color: #0056b3;
+}
+
+.footer-bottom {
+    margin-top: 2rem;
+    text-align: center;
+    font-size: 0.875rem;
+    color: #888;
+}
+
+.footer-bottom .logo {
+    font-weight: bold;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+    </style>
 </head>
 <body>
-    <header>
-        <nav class="navbar">
-            <ul>
-                <li><a href="home.html" class="nav-link">Home</a></li>
-                <li><a href="store.html" class="nav-link">Store</a></li>
-                <li><a href="about-us.html" class="nav-link">About Us</a></li>
-                <li><a href="events.html" class="nav-link">Events</a></li>
-                <li><a href="Blogs.html" class="nav-link active">Blogs</a></li>
-                <li><a href="login.html" class="nav-link">Login</a></li>
-            </ul>
-            <img src="logo.jpg" alt="Logo" class="navbar-image">
-        </nav>
-    </header>
-    <main>
-        <section>
-            <h1>Our Blog</h1>
-            <p>Stay tuned for news about our launch of Project Idle.</p>
-        </section>
-    </main>
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-join">
-                <p>Get the latest updates and more.</p>
-                <h2>Join our community today!</h2>
-                <div class="social-icons">
-                    <a href="#" class="discord-icon">Discord</a>
-                    <a href="#" class="twitter-icon">Twitter</a>
-                    <a href="#" class="youtube-icon">YouTube</a>
-                </div>
-            </div>
-            <div class="footer-links">
-                <div class="footer-column">
-                    <h3>Site</h3>
-                    <ul>
-                        <li><a href="#">Merchandise</a></li>
-                        <li><a href="#">Developer Blogs</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h3>Connect</h3>
-                    <ul>
-                        <li><a href="#">Twitter</a></li>
-                        <li><a href="#">Discord</a></li>
-                        <li><a href="#">YouTube</a></li>
-                        <li><a href="#">Roblox</a></li>
-                    </ul>
-                </div>
+
+<header>
+    <nav class="navbar">
+        <ul>
+            <li><a href="home.html" class="nav-link">Home</a></li>
+            <li><a href="store.html" class="nav-link">Store</a></li>
+            <li><a href="about-us.html" class="nav-link">About Us</a></li>
+            <li><a href="events.html" class="nav-link">Events</a></li>
+            <li><a href="Blogs.html" class="nav-link active">Blogs</a></li>
+            <li><a href="login.html" class="nav-link">Login</a></li>
+        </ul>
+        <img src="logo.jpg" alt="Logo" class="navbar-image">
+    </nav>
+</header>
+
+<main>
+    <div class="blog-container">
+        <h1 class="blog-title">Exciting News: We're Going Live Soon!</h1>
+        <p class="blog-meta">Posted on January 12, 2025 by Project Idle Team</p>
+        <div class="blog-content">
+            <p>Hello, Project Idle community! We're thrilled to announce that our platform will be going live soon! As we prepare for this exciting launch, here are a few updates and announcements:</p>
+
+            <h2>We’re Hiring!</h2>
+            <p>Do you want to be part of the Project Idle journey? We're currently looking for talented individuals to join our team. If you're passionate about gaming, web development, or content creation, this is your chance to shine. Contact zyndor_zx on discord!!!</p>
+
+            <h2>Calling All Partners!</h2>
+            <p>Are you a creator, developer, or influencer looking to collaborate? We're seeking partnerships to help make Project Idle the best platform it can be. Reach out to us at zyndor_zx on discord to explore partnership opportunities.</p>
+
+            <h2>Store Coming Soon</h2>
+            <p>Our store isn’t open just yet, but it will be stocked with amazing items and perks soon. Stay tuned for updates!</p>
+
+            <h2>Login Page Under Development</h2>
+            <p>We’re working on a login feature that will allow you to track your wins, stats, and more directly on our website. Keep an eye out for its release!</p>
+
+            <p>We can't wait to share all the exciting features and updates with you. Thank you for your continued support as we prepare for launch!</p>
+        </div>
+        <div class="blog-footer">
+            &copy; 2025 Project Idle. <a href="blogs.html">Read more blogs</a>.
+        </div>
+    </div>
+</main>
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-join">
+            <p>Get the latest updates and more.</p>
+            <h2>Join our community today!</h2>
+            <div class="social-icons">
+                <a href="#" class="discord-icon">Discord</a>
+                <a href="#" class="twitter-icon">Twitter</a>
+                <a href="#" class="youtube-icon">YouTube</a>
             </div>
         </div>
-        <div class="footer-bottom">
-            <div class="logo">Project Idle</div>
-            <p>Copyright © 2025 Project Idle. All rights reserved.</p>
+        <div class="footer-links">
+            <div class="footer-column">
+                <h3>Site</h3>
+                <ul>
+                    <li><a href="#">Merchandise</a></li>
+                    <li><a href="#">Developer Blogs</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Connect</h3>
+                <ul>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">Discord</a></li>
+                    <li><a href="#">YouTube</a></li>
+                    <li><a href="#">Roblox</a></li>
+                </ul>
+            </div>
         </div>
-    </footer>
-    
+    </div>
+    <div class="footer-bottom">
+        <div class="logo">Project Idle</div>
+        <p>Copyright © 2025 Project Idle. All rights reserved.</p>
+    </div>
+</footer>
 </body>
 </html>
