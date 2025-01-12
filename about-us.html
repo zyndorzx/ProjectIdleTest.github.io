@@ -180,6 +180,116 @@
     .partnered-server img:hover {
         transform: scale(1.1); /* Expand image on hover */
     }
+
+    .footer {
+    background-color: #f9f9f9;
+    padding: 2rem 1rem;
+    text-align: center;
+    box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.footer-join {
+    text-align: center;
+    max-width: 400px;
+}
+
+.footer-join h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0.5rem 0;
+    color: #333;
+}
+
+.footer-join p {
+    font-size: 1rem;
+    color: #555;
+}
+
+.social-icons {
+    margin-top: 1rem;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.social-icons a {
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    font-weight: bold;
+    color: white;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.discord-icon {
+    background-color: #5865f2;
+}
+
+.twitter-icon {
+    background-color: #1da1f2;
+}
+
+.youtube-icon {
+    background-color: #ff0000;
+}
+
+.social-icons a:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+.footer-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.footer-column h3 {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-column ul li {
+    margin: 0.3rem 0;
+}
+
+.footer-column ul li a {
+    text-decoration: none;
+    color: #007bff;
+    transition: color 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+    color: #0056b3;
+}
+
+.footer-bottom {
+    margin-top: 2rem;
+    text-align: center;
+    font-size: 0.875rem;
+    color: #888;
+}
+
+.footer-bottom .logo {
+    font-weight: bold;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
     </style>
 </head>
 <body>
@@ -437,8 +547,41 @@
 
         </section>
     </main>
-    <footer>
-        <p>© 2025 Project Idle. All rights reserved.</p>
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-join">
+                <p>Get the latest updates and more.</p>
+                <h2>Join our community today!</h2>
+                <div class="social-icons">
+                    <a href="#" class="discord-icon">Discord</a>
+                    <a href="#" class="twitter-icon">Twitter</a>
+                    <a href="#" class="youtube-icon">YouTube</a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h3>Site</h3>
+                    <ul>
+                        <li><a href="#">Merchandise</a></li>
+                        <li><a href="#">Developer Blogs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Connect</h3>
+                    <ul>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">Discord</a></li>
+                        <li><a href="#">YouTube</a></li>
+                        <li><a href="#">Roblox</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="logo">BIG Games</div>
+            <p>Copyright © 2025 BIG Games. All rights reserved.</p>
+        </div>
     </footer>
+    
 </body>
 </html>
