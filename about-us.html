@@ -5,6 +5,182 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us - Project Idle</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        .hero-image {
+            position: relative;
+            width: 100%;
+            max-width: 1920px;
+            height: auto;
+            border-radius: 15px;
+            margin: 2rem auto;
+            display: block;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 0 4px 2px black;
+        }
+
+        .hero-image:hover {
+            transform: scale(1.05);
+            box-shadow: 
+                0 0 4px 2px rgba(0, 0, 0, 0.9),
+                0 0 6px 4px rgba(0, 0, 0, 0.8), 
+                0 0 8px 6px rgba(0, 0, 0, 0.7);
+        }
+
+        .hero-text {
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: white;
+            transition: transform 0.3s ease;
+            width: 90%;
+            max-width: 1000px;
+        }
+
+        .hero-title {
+            font-size: 5rem;
+            font-weight: bold;
+            background: linear-gradient(to right, #b19cd9, #ff3478);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: none;
+            margin: 0;
+            line-height: 1.1;
+            transition: font-size 0.3s ease;
+        }
+
+        .hero-subtitle {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-top: 1rem;
+            color: white;
+            line-height: 1.2;
+            transition: font-size 0.3s ease;
+        }
+
+        .hero-image:hover + .hero-text .hero-title {
+            font-size: 6rem;
+        }
+
+        .hero-image:hover + .hero-text .hero-subtitle {
+            font-size: 2.5rem;
+        }
+
+        .hero-description {
+            margin-top: 1rem;
+            font-size: 1.5rem;
+            color: white;
+            font-weight: bold;
+            line-height: 1.3;
+        }
+
+        .hero-extra-description {
+            margin-top: 1rem;
+            font-size: 0.75rem;
+            color: rgb(230, 230, 230);
+            font-weight: bold;
+            line-height: 1.4;
+        }
+
+        .button-container {
+            margin-top: 2rem;
+        }
+
+        .button {
+            padding: 1rem 2rem;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            margin: 0 1rem;
+            display: inline-block;
+            text-decoration: none;
+        }
+
+        .button-white {
+            background-color: white;
+            color: black;
+            border: 2px solid white;
+        }
+
+        .button-gradient {
+            background: linear-gradient(to right, #b19cd9, #ff3478);
+            color: white;
+            border: 0px solid transparent;
+            background-clip: padding-box;
+        }
+
+        .button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 4px 2px rgba(255, 252, 252, 0.9),
+                        0 0 6px 4px rgba(255, 255, 255, 0.8),
+                        0 0 8px 6px rgba(255, 255, 255, 0.7);
+        }
+
+        /* Add hover effect to profile pictures */
+        .team-member img, .team-testers img {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .team-member img:hover, .team-testers img:hover {
+            transform: scale(1.2); /* Increase size on hover */
+            box-shadow: 
+                0 0 4px 2px rgba(0, 0, 0, 0.2),
+                0 0 8px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Media Queries */
+        @media (max-width: 768px) {
+            .hero-image {
+                width: 90%;
+            }
+
+            .hero-title {
+                font-size: 3.5rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.5rem;
+            }
+
+            .button-container {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .button {
+                width: 80%;
+                margin-bottom: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.2rem;
+            }
+
+            .button {
+                width: 100%;
+            }
+        }
+        .partnered-server:hover {
+        transform: scale(1.05); /* Slightly larger on hover */
+        box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3); /* Stronger shadow */
+    }
+
+    .partnered-server img:hover {
+        transform: scale(1.1); /* Expand image on hover */
+    }
+    </style>
 </head>
 <body>
     <header>
@@ -22,8 +198,243 @@
     </header>
     <main>
         <section>
-            <h1>About Project Idle</h1>
-            <p>Learn more about us and our mission.</p>
+            <h2 style="text-align: center; font-size: 2.5rem; margin-top: 3rem;">Meet the Team</h2>
+            <div class="team-container" style="display: flex; flex-direction: column; align-items: center; gap: 2rem; margin-top: 2rem;">
+        
+                <!-- Owner -->
+                <div class="team-member" style="text-align: center;">
+                    <img src="islandbanana30pfp.png" alt="Owner - Zyndor" style="width: 150px; height: 150px; border-radius: 50%; border: 3px solid #ff3478;">
+                    <h3 style="font-size: 1.5rem; margin-top: 1rem;">Zyndor</h3>
+                    <p style="font-size: 1rem; color: gray;">Owner</p>
+                </div>
+        
+                <!-- Co-Owner -->
+                <div class="team-member" style="text-align: center;">
+                    <img src="placeholderpfp.png" alt="Co-Owner" style="width: 140px; height: 140px; border-radius: 50%; border: 2px solid #b19cd9;">
+                    <h3 style="font-size: 1.4rem; margin-top: 1rem;">Co-Owner</h3>
+                    <p style="font-size: 0.9rem; color: gray;">(Change Name Later)</p>
+                </div>
+        
+                <!-- Head Marketing -->
+                <div class="team-member" style="text-align: center;">
+                    <img src="placeholderpfp.png" alt="Head Marketing" style="width: 140px; height: 140px; border-radius: 50%; border: 2px solid #b19cd9;">
+                    <h3 style="font-size: 1.4rem; margin-top: 1rem;">Head Marketing</h3>
+                    <p style="font-size: 0.9rem; color: gray;">(Change Name Later)</p>
+                </div>
+        
+                <!-- Head Artist -->
+                <div class="team-member" style="text-align: center;">
+                    <img src="placeholderpfp.png" alt="Head Artist" style="width: 140px; height: 140px; border-radius: 50%; border: 2px solid #b19cd9;">
+                    <h3 style="font-size: 1.4rem; margin-top: 1rem;">Head Artist</h3>
+                    <p style="font-size: 0.9rem; color: gray;">(Change Name Later)</p>
+                </div>
+        
+                <!-- Main Developer -->
+                <div class="team-member" style="text-align: center;">
+                    <img src="placeholderpfp.png" alt="Main Developer" style="width: 130px; height: 130px; border-radius: 50%; border: 2px solid #b19cd9;">
+                    <h3 style="font-size: 1.3rem; margin-top: 1rem;">Main Developer</h3>
+                    <p style="font-size: 0.85rem; color: gray;">(Change Name Later)</p>
+                </div>
+        
+                <!-- Community Manager -->
+                <div class="team-member" style="text-align: center;">
+                    <img src="placeholderpfp.png" alt="Community Manager" style="width: 120px; height: 120px; border-radius: 50%; border: 2px solid #b19cd9;">
+                    <h3 style="font-size: 1.2rem; margin-top: 1rem;">Community Manager</h3>
+                    <p style="font-size: 0.8rem; color: gray;">(Change Name Later)</p>
+                </div>
+                <!-- Testers Section -->
+<div class="team-testers" style="text-align: center;">
+    <h3 style="font-size: 1.5rem; margin-bottom: 2rem;">Testers</h3>
+    <div style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 1.5rem; justify-items: center;">
+        <!-- List of 20 testers -->
+        <div>
+            <img src="placeholderpfp.png" alt="Tester 1" style="width: 80px; height: 80px; border-radius: 50%; margin-bottom: 0.5rem;">
+            <p style="font-size: 0.9rem;">Tester 1</p>
+        </div>
+        <div>
+            <img src="placeholderpfp.png" alt="Tester 2" style="width: 80px; height: 80px; border-radius: 50%; margin-bottom: 0.5rem;">
+            <p style="font-size: 0.9rem;">Tester 2</p>
+        </div>
+        <div>
+            <img src="placeholderpfp.png" alt="Tester 3" style="width: 80px; height: 80px; border-radius: 50%; margin-bottom: 0.5rem;">
+            <p style="font-size: 0.9rem;">Tester 3</p>
+        </div>
+        <div>
+            <img src="placeholderpfp.png" alt="Tester 4" style="width: 80px; height: 80px; border-radius: 50%; margin-bottom: 0.5rem;">
+            <p style="font-size: 0.9rem;">Tester 4</p>
+        </div>
+        <div>
+            <img src="placeholderpfp.png" alt="Tester 5" style="width: 80px; height: 80px; border-radius: 50%; margin-bottom: 0.5rem;">
+            <p style="font-size: 0.9rem;">Tester 5</p>
+        </div>
+        <div>
+            <img src="placeholderpfp.png" alt="Tester 6" style="width: 80px; height: 80px; border-radius: 50%; margin-bottom: 0.5rem;">
+            <p style="font-size: 0.9rem;">Tester 6</p>
+        </div>
+        <div>
+            <img src="placeholderpfp.png" alt="Tester 7" style="width: 80px; height: 80px; border-radius: 50%; margin-bottom: 0.5rem;">
+            <p style="font-size: 0.9rem;">Tester 7</p>
+        </div>
+        <div>
+            <img src="placeholderpfp.png" alt="Tester 8" style="width: 80px; height: 80px; border-radius: 50%; margin-bottom: 0.5rem;">
+            <p style="font-size: 0.9rem;">Tester 8</p>
+        </div>
+        <div>
+            <img src="placeholderpfp.png" alt="Tester 9" style="width: 80px; height: 80px; border-radius: 50%; margin-bottom: 0.5rem;">
+            <p style="font-size: 0.9rem;">Tester 9</p>
+        </div>
+        <div>
+            <img src="placeholderpfp.png" alt="Tester 10" style="width: 80px; height: 80px; border-radius: 50%; margin-bottom: 0.5rem;">
+            <p style="font-size: 0.9rem;">Tester 10</p>
+        </div>
+        <div>
+            <img src="placeholderpfp.png" alt="Tester 11" style="width: 80px; height: 80px; border-radius: 50%; margin-bottom: 0.5rem;">
+            <p style="font-size: 0.9rem;">Tester 11</p>
+        </div>
+        <div>
+            <img src="placeholderpfp.png" alt="Tester 12" style="width: 80px; height: 80px; border-radius: 50%; margin-bottom: 0.5rem;">
+            <p style="font-size: 0.9rem;">Tester 12</p>
+        </div>
+        <div>
+            <img src="placeholderpfp.png" alt="Tester 13" style="width: 80px; height: 80px; border-radius: 50%; margin-bottom: 0.5rem;">
+            <p style="font-size: 0.9rem;">Tester 13</p>
+        </div>
+        <div>
+            <img src="placeholderpfp.png" alt="Tester 14" style="width: 80px; height: 80px; border-radius: 50%; margin-bottom: 0.5rem;">
+            <p style="font-size: 0.9rem;">Tester 14</p>
+        </div>
+        <div>
+            <img src="placeholderpfp.png" alt="Tester 15" style="width: 80px; height: 80px; border-radius: 50%; margin-bottom: 0.5rem;">
+            <p style="font-size: 0.9rem;">Tester 15</p>
+        </div>
+        <div>
+            <img src="placeholderpfp.png" alt="Tester 16" style="width: 80px; height: 80px; border-radius: 50%; margin-bottom: 0.5rem;">
+            <p style="font-size: 0.9rem;">Tester 16</p>
+        </div>
+        <div>
+            <img src="placeholderpfp.png" alt="Tester 17" style="width: 80px; height: 80px; border-radius: 50%; margin-bottom: 0.5rem;">
+            <p style="font-size: 0.9rem;">Tester 17</p>
+        </div>
+        <div>
+            <img src="placeholderpfp.png" alt="Tester 18" style="width: 80px; height: 80px; border-radius: 50%; margin-bottom: 0.5rem;">
+            <p style="font-size: 0.9rem;">Tester 18</p>
+        </div>
+        <div>
+            <img src="placeholderpfp.png" alt="Tester 19" style="width: 80px; height: 80px; border-radius: 50%; margin-bottom: 0.5rem;">
+            <p style="font-size: 0.9rem;">Tester 19</p>
+        </div>
+        <div>
+            <img src="placeholderpfp.png" alt="Tester 20" style="width: 80px; height: 80px; border-radius: 50%; margin-bottom: 0.5rem;">
+            <p style="font-size: 0.9rem;">Tester 20</p>
+        </div>
+    </div>
+</div>
+ <!-- Partnered Servers Section -->
+<h2 style="text-align: center; font-size: 2.5rem; margin-top: 3rem; color: #ff7b00;">Partnered Servers</h2>
+<div class="partnered-servers-container" style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 2rem; justify-items: center; margin-top: 2rem;">
+    <!-- Partnered Servers -->
+    <div class="partnered-server" style="background-color: #f2f2f2; border-radius: 12px; padding: 1rem; text-align: center; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); transition: transform 0.3s ease-in-out;">
+        <img src="serverpfptemplate.jpg" alt="Server 1" style="width: 120px; height: 80px; border-radius: 8px; object-fit: cover; margin-bottom: 0.5rem; transition: transform 0.3s ease-in-out;" />
+        <p style="color: #ff7b00; font-size: 1rem;">Server 1</p>
+        <p style="color: black; font-size: 1rem;">Members: 500</p>
+    </div>
+    <div class="partnered-server" style="background-color: #f2f2f2; border-radius: 12px; padding: 1rem; text-align: center; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); transition: transform 0.3s ease-in-out;">
+        <img src="serverpfptemplate.jpg" alt="Server 2" style="width: 120px; height: 80px; border-radius: 8px; object-fit: cover; margin-bottom: 0.5rem; transition: transform 0.3s ease-in-out;" />
+        <p style="color: #ff7b00; font-size: 1rem;">Server 2</p>
+        <p style="color: black; font-size: 1rem;">Members: 300</p>
+    </div>
+    <div class="partnered-server" style="background-color: #f2f2f2; border-radius: 12px; padding: 1rem; text-align: center; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); transition: transform 0.3s ease-in-out;">
+        <img src="serverpfptemplate.jpg" alt="Server 3" style="width: 120px; height: 80px; border-radius: 8px; object-fit: cover; margin-bottom: 0.5rem; transition: transform 0.3s ease-in-out;" />
+        <p style="color: #ff7b00; font-size: 1rem;">Server 3</p>
+        <p style="color: black; font-size: 1rem;">Members: 450</p>
+    </div>
+    <div class="partnered-server" style="background-color: #f2f2f2; border-radius: 12px; padding: 1rem; text-align: center; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); transition: transform 0.3s ease-in-out;">
+        <img src="serverpfptemplate.jpg" alt="Server 4" style="width: 120px; height: 80px; border-radius: 8px; object-fit: cover; margin-bottom: 0.5rem; transition: transform 0.3s ease-in-out;" />
+        <p style="color: #ff7b00; font-size: 1rem;">Server 4</p>
+        <p style="color: black; font-size: 1rem;">Members: 600</p>
+    </div>
+    <div class="partnered-server" style="background-color: #f2f2f2; border-radius: 12px; padding: 1rem; text-align: center; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); transition: transform 0.3s ease-in-out;">
+        <img src="serverpfptemplate.jpg" alt="Server 5" style="width: 120px; height: 80px; border-radius: 8px; object-fit: cover; margin-bottom: 0.5rem; transition: transform 0.3s ease-in-out;" />
+        <p style="color: #ff7b00; font-size: 1rem;">Server 5</p>
+        <p style="color: black; font-size: 1rem;">Members: 700</p>
+    </div>
+    <div class="partnered-server" style="background-color: #f2f2f2; border-radius: 12px; padding: 1rem; text-align: center; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); transition: transform 0.3s ease-in-out;">
+        <img src="serverpfptemplate.jpg" alt="Server 6" style="width: 120px; height: 80px; border-radius: 8px; object-fit: cover; margin-bottom: 0.5rem; transition: transform 0.3s ease-in-out;" />
+        <p style="color: #ff7b00; font-size: 1rem;">Server 6</p>
+        <p style="color: black; font-size: 1rem;">Members: 800</p>
+    </div>
+    <div class="partnered-server" style="background-color: #f2f2f2; border-radius: 12px; padding: 1rem; text-align: center; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); transition: transform 0.3s ease-in-out;">
+        <img src="serverpfptemplate.jpg" alt="Server 7" style="width: 120px; height: 80px; border-radius: 8px; object-fit: cover; margin-bottom: 0.5rem; transition: transform 0.3s ease-in-out;" />
+        <p style="color: #ff7b00; font-size: 1rem;">Server 7</p>
+        <p style="color: black; font-size: 1rem;">Members: 350</p>
+    </div>
+    <div class="partnered-server" style="background-color: #f2f2f2; border-radius: 12px; padding: 1rem; text-align: center; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); transition: transform 0.3s ease-in-out;">
+        <img src="serverpfptemplate.jpg" alt="Server 8" style="width: 120px; height: 80px; border-radius: 8px; object-fit: cover; margin-bottom: 0.5rem; transition: transform 0.3s ease-in-out;" />
+        <p style="color: #ff7b00; font-size: 1rem;">Server 8</p>
+        <p style="color: black; font-size: 1rem;">Members: 550</p>
+    </div>
+    <div class="partnered-server" style="background-color: #f2f2f2; border-radius: 12px; padding: 1rem; text-align: center; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); transition: transform 0.3s ease-in-out;">
+        <img src="serverpfptemplate.jpg" alt="Server 9" style="width: 120px; height: 80px; border-radius: 8px; object-fit: cover; margin-bottom: 0.5rem; transition: transform 0.3s ease-in-out;" />
+        <p style="color: #ff7b00; font-size: 1rem;">Server 9</p>
+        <p style="color: black; font-size: 1rem;">Members: 900</p>
+    </div>
+    <div class="partnered-server" style="background-color: #f2f2f2; border-radius: 12px; padding: 1rem; text-align: center; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); transition: transform 0.3s ease-in-out;">
+        <img src="serverpfptemplate.jpg" alt="Server 10" style="width: 120px; height: 80px; border-radius: 8px; object-fit: cover; margin-bottom: 0.5rem; transition: transform 0.3s ease-in-out;" />
+        <p style="color: #ff7b00; font-size: 1rem;">Server 10</p>
+        <p style="color: black; font-size: 1rem;">Members: 650</p>
+    </div>
+    <div class="partnered-server" style="background-color: #f2f2f2; border-radius: 12px; padding: 1rem; text-align: center; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); transition: transform 0.3s ease-in-out;">
+        <img src="serverpfptemplate.jpg" alt="Server 11" style="width: 120px; height: 80px; border-radius: 8px; object-fit: cover; margin-bottom: 0.5rem; transition: transform 0.3s ease-in-out;" />
+        <p style="color: #ff7b00; font-size: 1rem;">Server 11</p>
+        <p style="color: black; font-size: 1rem;">Members: 750</p>
+    </div>
+    <div class="partnered-server" style="background-color: #f2f2f2; border-radius: 12px; padding: 1rem; text-align: center; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); transition: transform 0.3s ease-in-out;">
+        <img src="serverpfptemplate.jpg" alt="Server 12" style="width: 120px; height: 80px; border-radius: 8px; object-fit: cover; margin-bottom: 0.5rem; transition: transform 0.3s ease-in-out;" />
+        <p style="color: #ff7b00; font-size: 1rem;">Server 12</p>
+        <p style="color: black; font-size: 1rem;">Members: 550</p>
+    </div>
+    <div class="partnered-server" style="background-color: #f2f2f2; border-radius: 12px; padding: 1rem; text-align: center; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); transition: transform 0.3s ease-in-out;">
+        <img src="serverpfptemplate.jpg" alt="Server 13" style="width: 120px; height: 80px; border-radius: 8px; object-fit: cover; margin-bottom: 0.5rem; transition: transform 0.3s ease-in-out;" />
+        <p style="color: #ff7b00; font-size: 1rem;">Server 13</p>
+        <p style="color: black; font-size: 1rem;">Members: 700</p>
+    </div>
+    <div class="partnered-server" style="background-color: #f2f2f2; border-radius: 12px; padding: 1rem; text-align: center; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); transition: transform 0.3s ease-in-out;">
+        <img src="serverpfptemplate.jpg" alt="Server 14" style="width: 120px; height: 80px; border-radius: 8px; object-fit: cover; margin-bottom: 0.5rem; transition: transform 0.3s ease-in-out;" />
+        <p style="color: #ff7b00; font-size: 1rem;">Server 14</p>
+        <p style="color: black; font-size: 1rem;">Members: 450</p>
+    </div>
+    <div class="partnered-server" style="background-color: #f2f2f2; border-radius: 12px; padding: 1rem; text-align: center; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); transition: transform 0.3s ease-in-out;">
+        <img src="serverpfptemplate.jpg" alt="Server 15" style="width: 120px; height: 80px; border-radius: 8px; object-fit: cover; margin-bottom: 0.5rem; transition: transform 0.3s ease-in-out;" />
+        <p style="color: #ff7b00; font-size: 1rem;">Server 15</p>
+        <p style="color: black; font-size: 1rem;">Members: 800</p>
+    </div>
+    <div class="partnered-server" style="background-color: #f2f2f2; border-radius: 12px; padding: 1rem; text-align: center; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); transition: transform 0.3s ease-in-out;">
+        <img src="serverpfptemplate.jpg" alt="Server 16" style="width: 120px; height: 80px; border-radius: 8px; object-fit: cover; margin-bottom: 0.5rem; transition: transform 0.3s ease-in-out;" />
+        <p style="color: #ff7b00; font-size: 1rem;">Server 16</p>
+        <p style="color: black; font-size: 1rem;">Members: 600</p>
+    </div>
+    <div class="partnered-server" style="background-color: #f2f2f2; border-radius: 12px; padding: 1rem; text-align: center; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); transition: transform 0.3s ease-in-out;">
+        <img src="serverpfptemplate.jpg" alt="Server 17" style="width: 120px; height: 80px; border-radius: 8px; object-fit: cover; margin-bottom: 0.5rem; transition: transform 0.3s ease-in-out;" />
+        <p style="color: #ff7b00; font-size: 1rem;">Server 17</p>
+        <p style="color: black; font-size: 1rem;">Members: 900</p>
+    </div>
+    <div class="partnered-server" style="background-color: #f2f2f2; border-radius: 12px; padding: 1rem; text-align: center; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); transition: transform 0.3s ease-in-out;">
+        <img src="serverpfptemplate.jpg" alt="Server 18" style="width: 120px; height: 80px; border-radius: 8px; object-fit: cover; margin-bottom: 0.5rem; transition: transform 0.3s ease-in-out;" />
+        <p style="color: #ff7b00; font-size: 1rem;">Server 18</p>
+        <p style="color: black; font-size: 1rem;">Members: 750</p>
+    </div>
+    <div class="partnered-server" style="background-color: #f2f2f2; border-radius: 12px; padding: 1rem; text-align: center; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); transition: transform 0.3s ease-in-out;">
+        <img src="serverpfptemplate.jpg" alt="Server 19" style="width: 120px; height: 80px; border-radius: 8px; object-fit: cover; margin-bottom: 0.5rem; transition: transform 0.3s ease-in-out;" />
+        <p style="color: #ff7b00; font-size: 1rem;">Server 19</p>
+        <p style="color: black; font-size: 1rem;">Members: 650</p>
+    </div>
+    <div class="partnered-server" style="background-color: #f2f2f2; border-radius: 12px; padding: 1rem; text-align: center; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); transition: transform 0.3s ease-in-out;">
+        <img src="serverpfptemplate.jpg" alt="Server 20" style="width: 120px; height: 80px; border-radius: 8px; object-fit: cover; margin-bottom: 0.5rem; transition: transform 0.3s ease-in-out;" />
+        <p style="color: #ff7b00; font-size: 1rem;">Server 20</p>
+        <p style="color: black; font-size: 1rem;">Members: 850</p>
+    </div>
+</div>
+
         </section>
     </main>
     <footer>
